@@ -1,0 +1,23 @@
+{
+  "name": "playwright-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "npx mocha tests/e2e/demo.test.js --reporter mochawesome --reporter-options reportDir=test-results,reportFilename=jobSearch-report --no-timeout",
+    "generate-report": "node describeReport.js",
+    "test": "npm run demo && npm run generate-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "fs": "^0.0.1-security",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-describe-report-generator": "^1.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "playwright": "^1.37.0"
+  }
+}
